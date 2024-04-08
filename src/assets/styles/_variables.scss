@@ -10,3 +10,14 @@ $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
+
+$theme-colors: (
+  "primary":    #051b11,
+  "secondary":  #0f5132,
+  "success":    #198754,
+  "info":       #d1e7dd,
+  "warning":    #cc9a06,
+  "danger":     #58151c,
+  "light":      #a3cfbb,
+  "dark":       #051b11
+);
