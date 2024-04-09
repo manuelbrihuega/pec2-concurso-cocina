@@ -2,60 +2,74 @@
   box-sizing: border-box;
 }
 
+.pagina {
+  height: 100vh;
+  margin: 0;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $color-fondo;
+}
+
+.poster {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+  text-align: center;
+  background-image: url("../images/2.jpg");
+  background-size: cover;
+  container-type: inline-size;
+}
+
+.poster__texto {
+  padding-right: 22cqw;
+  padding-bottom: 5rem;
+  padding-left: 22cqw;
+  margin: 0;
+  background-color: $color-fondo-semitransparente;
+
+  @container (max-width: #{$tablet-max-width}) {
+    padding-right: 12cqw;
+    padding-left: 12cqw;
+  }
+
+  @container (max-width: #{$movil-max-width}) {
+    padding-right: 3cqw;
+    padding-left: 3cqw;
+  }
+}
+
+.poster__titulo {
+  padding-top: 5rem;
+  padding-right: 22cqw;
+  padding-left: 22cqw;
+  margin: 0;
+  background-color: $color-fondo-semitransparente;
+
+  @container (max-width: #{$tablet-max-width}) {
+    padding-right: 12cqw;
+    padding-left: 12cqw;
+  }
+
+  @container (max-width: #{$movil-max-width}) {
+    padding-right: 3cqw;
+    padding-left: 3cqw;
+  }
+}
+
 @supports (display:grid) {
   .pagina {
     display: grid;
     grid-template-rows: 1fr 6fr 3fr;
   }
-}
 
-.pagina {
-  margin: 0;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
-
-
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
-
-.uoc-logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
-
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+  .poster {
+    display: grid;
+    grid-template-rows: auto max-content;
   }
-}
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
+  .poster__titulo {
+    align-self: end;
   }
-}
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
 }

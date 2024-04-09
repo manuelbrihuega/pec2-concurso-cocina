@@ -1,19 +1,27 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+$font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
+$color-bordes: #a3cfbb;
+$color-fondo-tooltips: #d1e7dd;
+$color-texto-tooltips: #0f5132;
+$color-fondo: rgba(255, 255, 255, 1);
+$color-fondo-semitransparente: rgba(255, 255, 255, .5);
 
-$mqMinWidth: 420px;
+// Umbrales responsive
+$tablet-max-width: 950px;
+$movil-max-width: 700px;
+$minimo-max-width: 300px;
+
+// Colores para configurar Bootstrap
 
 $theme-colors: (
-  "primary":    #051b11,
-  "secondary":  #0f5132,
+  "primary":    #0f5132,
+  "secondary":  #b46f21,
   "success":    #198754,
   "info":       #d1e7dd,
   "warning":    #cc9a06,
@@ -21,3 +29,8 @@ $theme-colors: (
   "light":      #a3cfbb,
   "dark":       #051b11
 );
+
+$nav-link-color: #0f5132;
+$nav-link-hover-color: #198754;
+$tooltip-bg: $color-fondo-tooltips;
+$tooltip-color: $color-texto-tooltips;
