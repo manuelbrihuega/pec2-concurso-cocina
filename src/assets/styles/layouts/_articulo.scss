@@ -33,7 +33,7 @@
 :is(.inicio__titulo, .inicio__autor) {
   margin: 0;
   text-align: center;
-  background-color: $color-fondo-semitransparente;
+  background-color: color-opacidad($blanco, .5);
 }
 
 @supports (display:grid) {

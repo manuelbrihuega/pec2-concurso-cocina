@@ -1,0 +1,33 @@
+.galeria,
+.contacto {
+  padding-top: 10dvh;
+  padding-bottom: 10dvh;
+}
+
+.galeria {
+  background-color: color(display-p3 1 .69 0 / .25);
+  container-type: inline-size;
+}
+
+.contacto__titulo,
+.galeria__titulo {
+  text-align: center;
+}
+
+.contacto__formulario,
+.galeria__carrusel {
+  padding-top: 4cqh;
+  margin-right: 15cqw;
+  margin-left: 15cqw;
+}
+
+.galeria__carrusel {
+  @container (max-width: #{$tablet-max-width}) {
+    margin-right: 10cqw;
+    margin-left: 10cqw;
+  }
+  @container (max-width: #{$movil-max-width}) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

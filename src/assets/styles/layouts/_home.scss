@@ -8,7 +8,7 @@
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
-  background-color: $color-fondo;
+  background-color: color-opacidad($blanco, 1);
 }
 
 .poster {
@@ -28,7 +28,7 @@
   padding-bottom: 5rem;
   padding-left: 22cqw;
   margin: 0;
-  background-color: $color-fondo-semitransparente;
+  background-color: color-opacidad($blanco, .5);
 
   @container (max-width: #{$tablet-max-width}) {
     padding-right: 12cqw;
@@ -46,7 +46,7 @@
   padding-right: 22cqw;
   padding-left: 22cqw;
   margin: 0;
-  background-color: $color-fondo-semitransparente;
+  background-color: color-opacidad($blanco, .5);
 
   @container (max-width: #{$tablet-max-width}) {
     padding-right: 12cqw;

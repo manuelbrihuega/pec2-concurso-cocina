@@ -9,6 +9,8 @@
 
 @import "variables";
 
+@import "funciones";
+
 // Defino el orden predeterminado de las capas
 @layer bootstrap, layouts;
 
@@ -36,6 +38,7 @@
   @import "layouts/home";
   @import "layouts/cocineros";
   @import "layouts/articulo";
+  @import "layouts/contacto";
 }
 
 /**

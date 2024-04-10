@@ -1,0 +1,4 @@
+// Devuelve el color dado con la opacidad especificada
+@function color-opacidad($color, $opacity) {
+  @return rgba($color, $opacity);
+}
