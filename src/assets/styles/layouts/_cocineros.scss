@@ -1,0 +1,52 @@
+.cocineros {
+  padding-right: 8cqw;
+  padding-left: 8cqw;
+  container-type: inline-size;
+
+  @container (max-width: #{$tablet-max-width}) {
+    padding-right: 5cqw;
+    padding-left: 5cqw;
+  }
+
+  @container (max-width: #{$movil-max-width}) {
+    padding-right: 3cqw;
+    padding-left: 3cqw;
+  }
+}
+
+.pagina--secundaria > :first-child {
+  position: relative;
+  border-bottom: 2px solid $color-bordes;
+}
+
+.cocineros__titulo {
+  padding-top: 5rem;
+  text-align: center;
+}
+
+.cocineros__reticula {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cocinero {
+  container-type: inline-size;
+
+  @container (max-width: 300px) {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+
+.reticula__cocinero {
+  flex-basis: calc(33.33% - 50px);
+  margin: 25px;
+
+  @media (max-width: $tablet-max-width) {
+    flex-basis: calc(50% - 50px);
+  }
+
+  @media (max-width: $movil-max-width) {
+    flex-basis: calc(100% - 50px);
+  }
+}
