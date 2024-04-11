@@ -32,14 +32,14 @@
  * Import layouts
  * It's a best practice to use a different partial for each page
  */
-@layer layouts {
-  @import "layouts/cabecera";
-  @import "layouts/pie";
-  @import "layouts/home";
-  @import "layouts/cocineros";
-  @import "layouts/articulo";
-  @import "layouts/contacto";
-}
+
+@import "layouts/cabecera";
+@import "layouts/pie";
+@import "layouts/home";
+@import "layouts/cocineros";
+@import "layouts/articulo";
+@import "layouts/contacto";
+
 
 /**
  * Do NOT include anything else in this file!

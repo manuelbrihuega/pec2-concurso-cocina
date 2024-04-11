@@ -13,6 +13,11 @@
   }
 }
 
+.pagina--secundaria > :first-child {
+  position: relative;
+  border-bottom: 2px solid $color-bordes;
+}
+
 .logo {
   width: fit-content;
   font-weight: 700;

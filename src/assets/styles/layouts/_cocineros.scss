@@ -1,49 +1,50 @@
-.cocineros {
-  @include padding(null, 8cqw, null, 8cqw);
-  container-type: inline-size;
-
-  @container (max-width: #{$tablet-max-width}) {
-    @include padding(null, 5cqw, null, 5cqw);
+// Capa para los estilos concretos de la retícula flex
+@layer reticula {
+  .cocineros__reticula {
+    display: flex;
+    flex-wrap: wrap;
   }
 
-  @container (max-width: #{$movil-max-width}) {
-    @include padding(null, 3cqw, null, 3cqw);
-  }
-}
+  .reticula__cocinero {
+    flex-basis: calc(33.33% - 50px);
+    @include margin(25px, 25px, 25px, 25px);
 
-.pagina--secundaria > :first-child {
-  position: relative;
-  border-bottom: 2px solid $color-bordes;
-}
+    @media (max-width: $tablet-max-width) {
+      flex-basis: calc(50% - 50px);
+    }
 
-.cocineros__titulo {
-  @include padding(5rem, null, null, null);
-  text-align: center;
-}
-
-.cocineros__reticula {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.cocinero {
-  container-type: inline-size;
-
-  @container (max-width: 300px) {
-    font-size: 12px;
-    line-height: 1.4;
+    @media (max-width: $movil-max-width) {
+      flex-basis: calc(100% - 50px);
+    }
   }
 }
 
-.reticula__cocinero {
-  flex-basis: calc(33.33% - 50px);
-  @include margin(25px, 25px, 25px, 25px);
+// Capa para los estilos concretos de la página
+@layer cocineros {
+  .cocineros {
+    @include padding(null, 8cqw, null, 8cqw);
+    container-type: inline-size;
 
-  @media (max-width: $tablet-max-width) {
-    flex-basis: calc(50% - 50px);
+    @container (max-width: #{$tablet-max-width}) {
+      @include padding(null, 5cqw, null, 5cqw);
+    }
+
+    @container (max-width: #{$movil-max-width}) {
+      @include padding(null, 3cqw, null, 3cqw);
+    }
   }
 
-  @media (max-width: $movil-max-width) {
-    flex-basis: calc(100% - 50px);
+  .cocineros__titulo {
+    @include padding(5rem, null, null, null);
+    text-align: center;
+  }
+
+  .cocinero {
+    container-type: inline-size;
+
+    @container (max-width: 300px) {
+      font-size: 12px;
+      line-height: 1.4;
+    }
   }
 }
