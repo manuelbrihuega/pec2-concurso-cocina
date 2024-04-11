@@ -29,6 +29,22 @@
   text-decoration: none;
 }
 
+.info__creditos {
+  @include padding(0, 0, 0, 0);
+  @include margin(0, 0, 0, 0);
+  font-size: .6rem;
+  line-height: .8rem;
+}
+
+.info__imagen {
+  max-width: 12px;
+  @include margin(0, 0, 0, 2px);
+}
+
+.info__enlace {
+  text-decoration: none;
+}
+
 .navegacion__logo {
   @include centrar();
   font-size: 1.5rem;
