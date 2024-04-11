@@ -3,14 +3,12 @@
 }
 
 .inicio {
-  background-image: url("../images/1.jpg");
-  background-position: center;
-  background-size: cover;
+  @include imagen-fondo (url("../images/1.jpg"));
   container-type: inline-size;
 }
 
 .inicio__titulo {
-  padding-top: 30vh;
+  @include padding(30vh, null, null, null);
   font-size: 5cqw;
   font-weight: 200;
 
@@ -26,87 +24,72 @@
 .inicio__autor {
   display: block;
   width: 100%;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  @include padding(8rem, null, 8rem, null);
 }
 
 :is(.inicio__titulo, .inicio__autor) {
-  margin: 0;
+  @include margin(0, 0, 0, 0);
   text-align: center;
   background-color: color-opacidad($blanco, .5);
 }
 
 @supports (display:grid) {
   .seccion {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 2rem;
+    @include grid(1fr 2fr, null, 2rem);
 
     @media (max-width: $movil-max-width) {
-      grid-template-columns: 1fr;
+      @include grid(1fr, null, 2rem);
     }
   }
 
   :is(.seccion:has(> .seccion__lista), .seccion:has(> .seccion__imagen), .seccion:has(> .seccion__cita)) {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    @include grid(1fr, null, 1rem);
   }
 }
 
 .seccion {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  margin-right: 22rem;
-  margin-left: 22rem;
+  @include padding(4rem, null, 4rem, null);
+  @include margin(null, 22rem, null, 22rem);
   border-bottom: 2px solid $color-bordes;
 
   @container (max-width: 1200px) {
-    margin-right: 8rem;
-    margin-left: 8rem;
+    @include margin(null, 8rem, null, 8rem);
   }
 
   @container (max-width: #{$movil-max-width}) {
-    margin-right: 1rem;
-    margin-left: 1rem;
+    @include margin(null, 1rem, null, 1rem);
   }
 
   &:has(> .seccion__imagen) {
-    padding-bottom: 0;
-    margin-right: 12rem;
-    margin-left: 12rem;
+    @include padding(null, null, 0, null);
+    @include margin(null, 12rem, null, 12rem);
     border-bottom: none;
 
     .seccion__titulo,
     .seccion__texto {
-      margin-right: 10rem;
-      margin-left: 10rem;
+      @include margin(null, 10rem, null, 10rem);
     }
 
     .seccion__texto:last-child {
-      padding-bottom: 4rem;
+      @include padding(null, null, 4rem, null);
       border-bottom: 2px solid $color-bordes;
     }
 
     @container (max-width: 1200px) {
-      margin-right: 4rem;
-      margin-left: 4rem;
+      @include margin(null, 4rem, null, 4rem);
 
       .seccion__titulo,
       .seccion__texto {
-        margin-right: 4rem;
-        margin-left: 4rem;
+        @include margin(null, 4rem, null, 4rem);
       }
     }
 
     @container (max-width: #{$movil-max-width}) {
-      margin-right: 0;
-      margin-left: 0;
+      @include margin(null, 0, null, 0);
 
       .seccion__titulo,
       .seccion__texto {
-        margin-right: 1rem;
-        margin-left: 1rem;
+        @include margin(null, 1rem, null, 1rem);
       }
     }
   }
@@ -117,7 +100,7 @@
 }
 
 .seccion__texto {
-  margin-bottom: 0;
+  @include margin(null, null, 0, null);
 }
 
 .seccion__imagen {
@@ -125,8 +108,7 @@
 }
 
 .seccion__cita {
-  margin-right: 12rem;
-  margin-left: 12rem;
+  @include margin(null, 12rem, null, 12rem);
   font-style: italic;
 
   > :last-child {
@@ -134,13 +116,11 @@
   }
 
   @media (max-width: $tablet-max-width) {
-    margin-right: 6rem;
-    margin-left: 6rem;
+    @include margin(null, 6rem, null, 6rem);
   }
 
   @media (max-width: $movil-max-width) {
-    margin-right: 1rem;
-    margin-left: 1rem;
+    @include margin(null, 1rem, null, 1rem);
   }
 }
 
@@ -152,18 +132,16 @@
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin-right: 15px;
+  @include margin(null, 15px, null, null);
   font-weight: 200;
   line-height: 30px;
   text-align: center;
   content: counter(descriptions);
   counter-increment: descriptions;
   border: 1px solid $color-bordes;
-  border-radius: 50%;
+  @include borde-redondeado(50%);
 }
 
 .lista__descripcion {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 45px;
+  @include padding(1rem, null, 1rem, 45px);
 }

@@ -1,41 +1,36 @@
 .pie {
-  padding-top: 2rem;
-  padding-right: 5rem;
-  padding-bottom: 2rem;
-  padding-left: 5rem;
+  @include padding(2rem, 5rem, 2rem, 5rem);
   text-align: center;
 
   @media (max-width: $tablet-max-width) {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    @include padding(null, 2rem, null, 2rem);
   }
 
   @media (max-width: $movil-max-width) {
-    padding-right: .5rem;
-    padding-left: .5rem;
+    @include padding(null, .5rem, null, .5rem);
   }
 }
 
 .navegacion {
-  padding-top: 1rem;
+  @include padding(1rem, null, null, null);
   border-top: 2px solid $color-bordes;
 }
 
 .info {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  margin-right: auto;
-  margin-left: auto;
+  @include padding(5rem, null, 5rem, null);
+  @include centrar();
 
   @media (max-width: $tablet-max-width) {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    @include padding(2.5rem, null, 2.5rem, null);
   }
 }
 
+.info__telefono {
+  text-decoration: none;
+}
+
 .navegacion__logo {
-  margin-right: auto;
-  margin-left: auto;
+  @include centrar();
   font-size: 1.5rem;
   line-height: 1.5;
 }
@@ -51,28 +46,23 @@
 
 @supports (display:grid) {
   .pie {
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 1fr;
+    @include grid(1fr, auto auto, 0);
     height: fit-content;
   }
 
   .navegacion {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    @include grid(1fr 2fr 1fr, null, 0);
 
     @media (max-width: $tablet-max-width) {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      @include grid(1fr, null, 1.5rem);
     }
   }
 
   .navegacion__logo {
-    margin-left: 0;
+    @include margin(null, null, null, 0);
 
     @media (max-width: $tablet-max-width) {
-      margin-right: auto;
-      margin-left: auto;
+      @include centrar();
     }
   }
 }

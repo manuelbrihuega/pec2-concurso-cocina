@@ -2,19 +2,14 @@
   position: absolute;
   z-index: 1;
   width: 100%;
-  padding-top: 2rem;
-  padding-right: 5rem;
-  padding-bottom: 2rem;
-  padding-left: 5rem;
+  @include padding(2rem, 5rem, 2rem, 5rem);
 
   @media (max-width: $tablet-max-width) {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    @include padding(null, 2rem, null, 2rem);
   }
 
   @media (max-width: $movil-max-width) {
-    padding-right: .5rem;
-    padding-left: .5rem;
+    @include padding(null, .5rem, null, .5rem);
   }
 }
 
@@ -22,8 +17,7 @@
   width: fit-content;
   font-weight: 700;
   @media (max-width: $movil-max-width) {
-    margin-right: auto;
-    margin-left: auto;
+    @include centrar();
   }
 }
 
@@ -37,8 +31,7 @@
 
   @media (max-width: $movil-max-width) {
     float: none;
-    margin-right: auto;
-    margin-left: auto;
+    @include centrar();
   }
 
   @media (max-width: $minimo-max-width) {
@@ -57,12 +50,10 @@
 
 @supports (display:grid) {
   .cabecera {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr;
+    @include grid(1.5fr 2fr, null, 0);
 
     @media (max-width: $movil-max-width) {
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      @include grid(1fr, null, 2rem);
     }
   }
 

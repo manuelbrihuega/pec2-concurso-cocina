@@ -4,7 +4,7 @@
 
 .pagina {
   height: 100vh;
-  margin: 0;
+  @include margin(0, 0, 0, 0);
   font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
@@ -17,57 +17,46 @@
   justify-content: flex-end;
   height: 100vh;
   text-align: center;
-  background-image: url("../images/2.jpg");
-  background-position: center;
-  background-size: cover;
+  @include imagen-fondo (url("../images/2.jpg"));
   container-type: inline-size;
 }
 
 .poster__texto {
-  padding-right: 22cqw;
-  padding-bottom: 5rem;
-  padding-left: 22cqw;
-  margin: 0;
+  @include padding(null, 22cqw, 5rem, 22cqw);
+
+  @include margin(0, 0, 0, 0);
   background-color: color-opacidad($blanco, .5);
 
   @container (max-width: #{$tablet-max-width}) {
-    padding-right: 12cqw;
-    padding-left: 12cqw;
+    @include padding(null, 12cqw, null, 12cqw);
   }
 
   @container (max-width: #{$movil-max-width}) {
-    padding-right: 3cqw;
-    padding-left: 3cqw;
+    @include padding(null, 3cqw, null, 3cqw);
   }
 }
 
 .poster__titulo {
-  padding-top: 5rem;
-  padding-right: 22cqw;
-  padding-left: 22cqw;
-  margin: 0;
+  @include padding(5rem, 22cqw, null, 22cqw);
+  @include margin(0, 0, 0, 0);
   background-color: color-opacidad($blanco, .5);
 
   @container (max-width: #{$tablet-max-width}) {
-    padding-right: 12cqw;
-    padding-left: 12cqw;
+    @include padding(null, 12cqw, null, 12cqw);
   }
 
   @container (max-width: #{$movil-max-width}) {
-    padding-right: 3cqw;
-    padding-left: 3cqw;
+    @include padding(null, 3cqw, null, 3cqw);
   }
 }
 
 @supports (display:grid) {
   .pagina {
-    display: grid;
-    grid-template-rows: 1fr 6fr 3fr;
+    @include grid(null, 1fr 6fr 3fr, 0);
   }
 
   .poster {
-    display: grid;
-    grid-template-rows: auto max-content;
+    @include grid(null, auto max-content, 0);
   }
 
   .poster__titulo {

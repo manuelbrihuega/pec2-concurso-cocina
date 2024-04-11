@@ -2,3 +2,68 @@
 @function color-opacidad($color, $opacity) {
   @return rgba($color, $opacity);
 }
+
+// Mixin para los grid
+@mixin grid($columnas, $filas, $hueco) {
+  display: grid;
+  @if $columnas {
+    grid-template-columns: $columnas;
+  }
+  @if $filas {
+    grid-template-rows: $filas;
+  }
+  gap: $hueco;
+}
+
+// Mixin para las imágenes de fondo
+@mixin imagen-fondo($url) {
+  background-image: $url;
+  background-position: center;
+  background-size: cover;
+}
+
+// Mixin para los bordes redondeados
+@mixin borde-redondeado($porcentaje) {
+  border-top-left-radius: $porcentaje;
+  border-top-right-radius: $porcentaje;
+  border-bottom-right-radius: $porcentaje;
+  border-bottom-left-radius: $porcentaje;
+}
+
+// Mixin para centrar un elemento de bloque
+@mixin centrar() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// Mixin para el padding
+@mixin padding($top, $right, $bottom, $left) {
+  @if $top {
+    padding-top: $top;
+  }
+  @if $right {
+    padding-right: $right;
+  }
+  @if $bottom {
+    padding-bottom: $bottom;
+  }
+  @if $left {
+    padding-left: $left;
+  }
+}
+
+// Mixin para el padding
+@mixin margin($top, $right, $bottom, $left) {
+  @if $top {
+    margin-top: $top;
+  }
+  @if $right {
+    margin-right: $right;
+  }
+  @if $bottom {
+    margin-bottom: $bottom;
+  }
+  @if $left {
+    margin-left: $left;
+  }
+}

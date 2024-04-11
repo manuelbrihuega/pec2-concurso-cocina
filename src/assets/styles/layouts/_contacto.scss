@@ -1,7 +1,6 @@
 .galeria,
 .contacto {
-  padding-top: 10dvh;
-  padding-bottom: 10dvh;
+  @include padding(10dvh, null, 10dvh, null);
 }
 
 .galeria {
@@ -16,18 +15,15 @@
 
 .contacto__formulario,
 .galeria__carrusel {
-  padding-top: 4cqh;
-  margin-right: 15cqw;
-  margin-left: 15cqw;
+  @include padding(4cqh, null, null, null);
+  @include margin(null, 15cqw, null, 15cqw);
 }
 
 .galeria__carrusel {
   @container (max-width: #{$tablet-max-width}) {
-    margin-right: 10cqw;
-    margin-left: 10cqw;
+    @include margin(null, 10cqw, null, 10cqw);
   }
   @container (max-width: #{$movil-max-width}) {
-    margin-right: 0;
-    margin-left: 0;
+    @include margin(null, 0, null, 0);
   }
 }
